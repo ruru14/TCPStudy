@@ -26,23 +26,38 @@ public class ArrayList<T> {
 		if(index ==size){
 			resize();
 		}
-		this.data[index] = data;
+		this.data[index++] = data;
 	}
 	
 	//"arraylist는 sortedlist."
 	//어떤 의미로?
 	
 	public void add(Object data, int index){
+		if(index>this.index){
+			//error syntax
+			return;
+		}
+		
 		
 	}
 	
 	public void delete(int index){
+		if(index>=this.index){
+			//error syntax
+			return;
+		}
+		else{
+			data[index] = null;
+			for(int i=index; i<this.index-1;i++){
+				data[index] = data[index+1];
+			}
+			data[--this.index] = null;
+		}
 		
 	}
 	
 	public T get(int index){
-		T data = (T) this.data[index];
-		return data;
+		return (T)this.data[index];
 	}
 	
 	//lollllllllllllllllllllllllllll
