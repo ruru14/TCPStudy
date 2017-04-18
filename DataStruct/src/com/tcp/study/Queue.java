@@ -4,6 +4,8 @@ package com.tcp.study;
 public class Queue<T extends Object> {
 
 	
+	
+	
 	public Queue(){
 
 	}
