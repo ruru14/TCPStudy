@@ -4,6 +4,11 @@ class Node<T extends Object> {
 
 	private T data;
 	private Node<T> nextNode;
+	
+	public Node(){
+		this.data = null;
+		this.nextNode = null;
+	}
 
 	public Node<T> getNextNode() {
 		return nextNode;
